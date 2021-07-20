@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandi-Express</title>
+
+    <link rel="shortcut icon" type="image/jpg" href="apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="login.css" />
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="blueBg">
+            <div class="box signin" style="top: 0%;">
+                <h2>already have an account ?</h2>
+                <button class="signinBtn">Sign in</button>
+                <button class="signinBtn" style="margin-top: 2%;"><a href="index.html" style="text-decoration: none;">Back to Home</a></button>
+            </div>
+            <div class="box signup">
+                <h2>Don't have an account ?</h2>
+                <button class="signupBtn">Sign up</button>
+                <button class="signupBtn" style="margin-top: 2%;"><a href="index.html" style="text-decoration: none;">Back to Home</a></button>
+            </div>
+        </div>
+        <div class="formBx">
+
+            <div class="form signinForm">
+                <form action="">
+                    <h3>Sign in</h3>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                    <a href="#" class="forget">forget password</a>
+                </form>
+            </div>
+
+            <div class="form signupForm">
+                <form action="">
+                    <h3>Sign Up</h3>
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="Email Address">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- custom js file link  -->
+    <script>
+        const signinBtn = document.querySelector(".signinBtn");
+        const signupBtn = document.querySelector(".signupBtn");
+        const formBx = document.querySelector(".formBx");
+        const body = document.querySelector('body');
+
+
+        signupBtn.onclick = function() {
+            formBx.classList.add('active')
+            body.classList.add('active')
+        }
+        signinBtn.onclick = function() {
+            formBx.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+
+</html>
